@@ -1,0 +1,1620 @@
+@import "bootstrap"
+@import "slick-less"
+
+=b_a()
+  content: ''
+  position: absolute
+
+=m_a()
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+
+=flex()
+  display: flex
+  display: -webkit-flex
+
+=j-center()
+  justify-content: center
+  -webkit-justify-content: center
+
+=j-beetween()
+  justify-content: space-between
+  -webkit-justify-content: space-between
+
+=j-space-around()
+  justify-content: space-around
+  -webkit-justify-content: space-around
+
+=j-end()
+  justify-content: flex-end
+  -webkit-justify-content: flex-end
+
+=j-start()
+  justify-content: flex-start
+  -webkit-justify-content: flex-start
+
+=ai-center()
+  align-items: center
+  -webkit-align-items: center
+
+=ai-start()
+  align-items: flex-start
+  -webkit-align-items: flex-start
+
+=ai-end()
+  align-items: flex-end
+  -webkit-align-items: flex-end
+
+=as-center()
+  align-self: center
+  -webkit-align-self: center
+
+=as-end()
+  align-self: flex-end
+  -webkit-align-self: flex-end
+
+=as-start()
+  align-self: flex-start
+  -webkit-align-self: flex-start
+
+=wrap()
+  flex-wrap: wrap
+  -webkit-flex-wrap: wrap
+
+=col()
+  flex-direction: column
+  -webkit-flex-direction: column
+
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+
+=box-shadow($box-shadow)
+  -webkit-box-shadow: $box-shadow
+  -moz-box-shadow: $box-shadow
+  box-shadow: $box-shadow
+
+
+=transform($transform)
+  transform: $transform
+  -webkit-transform: $transform
+  -moz-transform: $transform
+  -ms-transform: $transform
+  -o-transform: $transform
+
+
+=transition($transition_default)
+  transition: $transition_default
+  -webkit-transition: $transition_default
+  -moz-transition: $transition_default
+  -o-transition: $transition_default
+
+
+/** Montserrat Light **/
+@font-face
+  font-family: "Montserrat-Light"
+  font-weight: 300
+  font-style: normal
+  src: url("../fonts/Montserrat-Light.eot")
+  src: url("../fonts/Montserrat-Light.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff")
+
+$Montserrat-light:'Montserrat-Light'
+
+
+/** Montserrat Regular **/
+@font-face
+  font-family: "Montserrat-Regular"
+  font-weight: 400
+  font-style: normal
+  src: url("../fonts/Montserrat-Regular.eot")
+  src: url("../fonts/Montserrat-Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff")
+
+
+$Montserrat-Regular:'Montserrat-Regular'
+
+/** Montserrat Regular-Italic **/
+@font-face
+  font-family: "Montserrat-Italic"
+  font-weight: 400
+  font-style: italic
+  src: url("../fonts/Montserrat-Italic.eot")
+  src: url("../fonts/Montserrat-Italic.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff")
+
+$Montserrat-Italic:'Montserrat-Italic'
+/** Montserrat Medium **/
+@font-face
+  font-family: "Montserrat-Medium"
+  font-weight: 500
+  font-style: normal
+  src: url("../fonts/Montserrat-Medium.eot")
+  src: url("../fonts/Montserrat-Medium.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff")
+
+
+$Montserrat-Medium:'Montserrat-Medium'
+
+
+
+/** Montserrat SemiBold **/
+@font-face
+  font-family: "Montserrat-SemiBold"
+  font-weight: 600
+  font-style: normal
+  src: url("../fonts/Montserrat-SemiBold.eot")
+  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format('embedded-opentype'),url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff")
+
+
+$Montserrat-SemiBold:'Montserrat-SemiBold'
+
+/** Montserrat SemiBold-Italic **/
+@font-face
+  font-family: "Montserrat"
+  font-weight: 600
+  font-style: italic
+  src: url("../fonts/Montserrat-SemiBoldItalic.eot")
+  src: url("../fonts/Montserrat-SemiBoldItalic.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-SemiBoldItalic.woff") format("woff")
+
+
+/** Montserrat Bold **/
+@font-face
+  font-family: "Montserrat-bold"
+  font-weight: 700
+  font-style: normal
+  src: url("../fonts/Montserrat-Bold.eot")
+  src: url("../fonts/Montserrat-Bold.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff")
+
+$Montserrat-bold:'Montserrat-bold'
+
+
+/** Montserrat ExtraBold **/
+@font-face
+  font-family: "Montserrat-ExtraBold"
+  font-weight: 800
+  font-style: normal
+  src: url("../fonts/Montserrat-ExtraBold.eot")
+  src: url("../fonts/Montserrat-ExtraBold.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff")
+
+
+$Montserrat-ExtraBold:'Montserrat-ExtraBold'
+
+/** Montserrat ExtraBold-Italic **/
+@font-face
+  font-family: "Montserrat"
+  font-weight: 800
+  font-style: italic
+  src: url("../fonts/Montserrat-ExtraBoldItalic.eot")
+  src: url("../fonts/Montserrat-ExtraBoldItalic.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBoldItalic.woff") format("woff")
+
+
+/** Montserrat Black **/
+@font-face
+  font-family: "Montserrat-Black"
+  font-weight: 900
+  font-style: normal
+  src: url("../fonts/Montserrat-Black.eot")
+  src: url("../fonts/Montserrat-Black.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff")
+
+
+$Montserrat-Black:'Montserrat-Black'
+
+
+$transition_default: .3s linear
+$color_blue:#353A83
+$grey:#F1F1F1
+$dakr_blue: #23265B
+
+a, button
+  +transition($transition_default)
+
+
+a
+  text-decoration: underline
+  color: #353A83
+
+  &:hover, &:focus
+    text-decoration: none
+
+
+button, input, .form-control
+  outline: none
+
+.form-control
+  &:hover, &:focus
+    box-shadow: none
+    outline: none
+
+
+button
+  cursor: pointer
+  &:hover, &:focus
+    +box-shadow(none)
+    outline: none
+
+img, video
+  max-width: 100%
+
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+
+body
+  font-family: $Montserrat-light
+  font-size: 20px
+  line-height: 24px
+  color: #333
+
+
+.wrapper
+  max-width: 1440px
+  margin: auto
+
+.container
+  width: 100%
+  max-width: 1280px
+  margin: auto
+
+.header_row.custom_row
+  .col_small
+    +flex
+    +wrap
+    @media (max-width: 991px)
+      width: 80%
+    @media (max-width: 575px)
+      width: 85%
+  .col_big
+    @media (max-width: 991px)
+      width: 20%
+      +flex
+      +ai-center
+      +j-center
+
+    @media (max-width: 575px)
+      width: 15%
+  .logo
+    border-right: 1px solid $grey
+    width: 55%
+    padding-right: 50px
+    padding-left: 15px
+    +flex
+    +ai-center
+    +j-end
+    @media (max-width: 1200px)
+      padding: 15px
+    @media (max-width: 991px)
+      width: 50%
+      +j-center
+  .phone_work
+    width: 45%
+    +flex
+    +ai-center
+    +j-center
+    @media (max-width: 991px)
+      width: 50%
+      border-right: 1px solid $grey
+    a
+      display: block
+      color: #333
+      font-size: 16px
+      text-decoration: none
+      @media (max-width: 1200px)
+        font-size: 14px
+      @media (max-width: 575px)
+        font-size: 12px
+      &:hover
+        text-decoration: underline
+        color: $color_blue
+    span
+      display: block
+      font-size: 16px
+      @media (max-width: 1200px)
+        font-size: 14px
+      @media (max-width: 575px)
+        font-size: 12px
+
+
+
+.title, h1, .h1
+  font-family: $Montserrat-ExtraBold
+  font-size: 46px
+  line-height: 48px
+  color: #333
+  margin-bottom: 30px
+  @media (max-width: 1200px)
+    font-size: 40px
+    line-height: 1.2
+  @media (max-width: 991px)
+    font-size: 30px
+    margin-bottom: 20px
+  @media (max-width: 767px)
+    font-size: 25px
+    margin-bottom: 10px
+  @media (max-width: 575px)
+    font-size: 22px
+.excerpt
+  font-size: 20px
+  line-height: 24px
+  font-family: $Montserrat-light
+  margin-bottom: 12px
+  @media (max-width: 1200px)
+    font-size: 18px
+  @media (max-width: 991px)
+    font-size: 16px
+
+.read_more
+  text-decoration: none
+  color: $color_blue
+  font-family: $Montserrat-Medium
+  font-size: 20px
+  @media (max-width: 1200px)
+    font-size: 18px
+  @media (max-width: 991px)
+    font-size: 16px
+  &:hover
+    text-decoration: underline
+
+  span
+    position: relative
+    display: inline-block
+    padding-right: 38px
+    &:before
+      +b_a
+      right: 0
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 21px
+      height: 11px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='11' viewBox='0 0 21 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.125 5.5L1.875 5.5M15.2917 1.66666L19.125 5.5L15.2917 1.66666ZM19.125 5.5L15.2917 9.33333L19.125 5.5Z' stroke='%23353A83' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  &.white
+      span
+        color: #fff
+        &:before
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='11' viewBox='0 0 21 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.125 5.5L1.875 5.5M15.2917 1.66666L19.125 5.5L15.2917 1.66666ZM19.125 5.5L15.2917 9.33333L19.125 5.5Z' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+section
+  .custom_row
+    .col_small
+      +flex
+      +ai-center
+      +j-center
+      background: $grey
+      padding: 30px
+      @media (max-width: 575px)
+        padding: 30px 15px
+      .desc
+        max-width: 400px
+.custom_row
+  +flex
+  +wrap
+
+  .col_small
+    width: 40%
+    @media (max-width: 991px)
+      width: 100%
+    @media (min-width: 992px)
+      border-right: 1px solid #fff
+      &.order_2
+        order: 2
+        -webkit-order: 2
+
+  .col_big
+    width: 60%
+    +flex
+    +ai-center
+    +j-center
+    border-bottom: 1px solid #fff
+    position: relative
+    @media (max-width: 991px)
+      width: 100%
+    @media (min-width: 992px)
+      &.order_1
+        order: 1
+        -webkit-order: 1
+
+.mm_btn
+  width: 30px
+  height: 20px
+  .hamburger
+    background: none
+    border: 0
+    width: 30px
+    height: 20px
+    position: relative
+    span
+      position: absolute
+      left: 0
+      width: 100%
+      height: 2px
+      background: $color_blue
+      +border-radius(2px)
+      &:nth-child(1)
+        top: 0
+      &:nth-child(2)
+        top: 0
+        bottom: 0
+        margin: auto
+      &:nth-child(3)
+        bottom: 0
+  @media (min-width: 992px)
+    display: none
+.main_menu
+  width: 100%
+
+  @media (max-width: 991px)
+    position: fixed
+    top: 0
+    right: 0
+    width: 80%
+    height: 100%
+    background: $color_blue
+    padding: 10px
+    z-index: 9999
+    +transform(translateX(100%))
+    opacity: 0
+    +transition($transition_default)
+    &.open
+      opacity: 1
+      +transform(translateX(0))
+  @media (max-width: 575px)
+    width: 90%
+  .mm_close
+    width: 30px
+    height: 30px
+    display: inline-block
+    margin-bottom: 30px
+    position: relative
+    background: #fff
+    margin-left: 10px
+    &:before, &:after
+      +b_a
+      +m_a
+      width: 20px
+      height: 1px
+      background: $color_blue
+    &:before
+      +transform(rotate(45deg))
+    &:after
+      +transform(rotate(-45deg))
+
+    @media (min-width: 992px)
+      display: none
+
+  .nav
+    > li
+      position: relative
+      @media (min-width: 992px)
+        flex-grow: 1
+        +flex
+        +ai-center
+        +j-center
+        + li
+          border-left: 1px solid #fff
+
+      @media (max-width: 991px)
+        width: 100%
+        padding-right: 40px
+      &:hover
+        .sub-menu
+          @media (min-width: 992px)
+            display: block
+      &.has-child
+        @media (min-width: 992px)
+          &:hover
+            > a
+              &:after
+                border-top: 5px solid #fff
+          > a
+              &:after
+                content: ''
+                width: 0
+                height: 0
+                border-top: 5px solid #333
+                border-left: 5px solid transparent
+                border-right: 5px solid transparent
+                position: absolute
+                margin-left: 10px
+                margin-top: 9px
+      .arrow
+        width: 30px
+        height: 30px
+        display: inline-block
+        position: absolute
+        right: 0
+        top: 5px
+        &.act
+          &:before
+            opacity: 0
+        &:before, &:after
+          +b_a
+          +m_a
+          width: 20px
+          height: 1px
+          background: #fff
+        &:before
+          +transform(rotate(90deg))
+        @media (min-width: 992px)
+          display: none
+      &:hover, &.active
+        > a
+          background: $color_blue
+          color: #fff
+
+      > a
+        width: 100%
+        background: $grey
+        position: relative
+        font-size: 16px
+        line-height: 24px
+        color: #333
+        display: inline-block
+        padding: 35px 20px
+        text-align: center
+        text-decoration: none
+        @media (max-width: 991px)
+          background: none
+          padding: 10px
+          line-height: 1.2
+          text-align: left
+          color: #fff
+
+
+
+
+    .sub-menu
+      display: none
+      z-index: 3
+      @media (max-width: 991px)
+        padding-left: 20px
+      @media (min-width: 992px)
+        position: absolute
+        top: 100%
+        left: 0
+        background: $color_blue
+        padding: 30px 50px
+        min-width: 443px
+
+
+      li
+        margin-bottom: 8px
+        @media (max-width: 991px)
+          margin-bottom: 5px
+        a
+          color: #fff
+          font-size: 16px
+          text-decoration: none
+          @media (max-width: 991px)
+            font-size: 14px
+          &:hover
+            text-decoration: underline
+
+
+.read_more.show_all
+  position: absolute
+  z-index: 2
+  bottom: 0
+  left: 0
+  background: $color_blue
+  width: 100%
+  height: 96px
+  +flex
+  +ai-center
+  padding-left: 95px
+  @media (max-width: 1200px)
+    height: 70px
+
+  @media (max-width: 991px)
+    height: 50px
+
+  span
+    color: #fff
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='11' viewBox='0 0 21 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.125 5.5L1.875 5.5M15.2917 1.66666L19.125 5.5L15.2917 1.66666ZM19.125 5.5L15.2917 9.33333L19.125 5.5Z' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+
+
+h2, .h2
+  font-family: $Montserrat-ExtraBold
+  font-size: 30px
+  line-height: 34px
+  margin-bottom: 30px
+  @media (max-width: 1200px)
+    font-size: 28px
+    line-height: 1.2
+  @media (max-width: 991px)
+    font-size: 26px
+    margin-bottom: 20px
+  @media (max-width: 767px)
+    font-size: 23px
+    margin-bottom: 10px
+  @media (max-width: 575px)
+    font-size: 20px
+  + .excerpt
+    @media (min-width: 1201px)
+      font-size: 18px
+
+
+
+.serv_list
+  +flex
+  +wrap
+  .serv_item
+    width: 20%
+    height: 288px
+    position: relative
+    background-size: cover
+    background-position: center
+    display: inline-block
+    text-decoration: none
+    overflow: hidden
+    @media (max-width: 1200px)
+      width: 25%
+    @media (max-width: 991px)
+      width: 33.33%
+    @media (max-width: 767px)
+      width: 50%
+    @media (max-width: 575px)
+      width: 100%
+
+    &:before
+      +b_a
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, #23265B 0%, rgba(35, 38, 91, 0) 100%)
+    &:hover
+      text-decoration: none
+      @media (min-width: 992px)
+        .serv_item_content
+          background: $color_blue
+          +transform(translateY(0))
+          .read_more
+            opacity: 1
+
+    .serv_item_content
+      position: absolute
+      width: 100%
+      height: 100%
+      +flex
+      +ai-center
+      padding: 35px
+      @media (min-width: 992px)
+        +transform(translateY(35%))
+        +transition($transition_default)
+      @media (max-width: 1200px)
+        padding: 20px
+      @media (max-width: 991px)
+        padding: 15px
+        +ai-end
+
+      .serv_name
+        font-family: $Montserrat-ExtraBold
+        font-size: 20px
+        line-height: 24px
+        color: #fff
+        z-index: 2
+        +flex
+        +ai-end
+        margin-bottom: 25px
+        @media (min-width: 992px)
+          min-height: 75px
+        @media (max-width: 991px)
+          margin-bottom: 20px
+
+
+      .read_more
+        color: #fff
+        @media (min-width: 992px)
+          opacity: 0
+          +transition($transition_default)
+        &:hover
+          text-decoration: underline
+
+    + .serv_item
+      border-left: 1px solid #fff
+
+
+
+
+.pr_list
+  +flex
+  +wrap
+  .pr_item
+    width: 33.33%
+    height: 168px
+    +flex
+    +ai-center
+    border-right: 1px solid #fff
+    border-bottom: 1px solid #fff
+    background: $grey
+    padding: 20px 70px 20px 75px
+    @media (max-width: 1400px)
+      padding: 20px 30px
+    @media (max-width: 1200px)
+      height: 140px
+      width: 50%
+    @media (max-width: 991px)
+      padding: 20px
+      height: 100px
+    @media (max-width: 767px)
+      width: 100%
+
+    &:first-child
+      .text
+        font-family: $Montserrat-ExtraBold
+        font-size: 30px
+        line-height: 34px
+        color: $color_blue
+        @media (max-width: 1200px)
+          font-size: 26px
+          line-height: 1.2
+        @media (max-width: 991px)
+          font-size: 24px
+        @media (max-width: 767px)
+          font-size: 22px
+    .flex
+      +flex
+      +ai-center
+    picture
+      display: inline-block
+      margin-right: 20px
+    .text
+      font-family: $Montserrat-SemiBold
+      font-size: 18px
+      line-height: 22px
+      @media (max-width: 1200px)
+        font-size: 16px
+
+
+
+
+.steps_list
+  +flex
+  +wrap
+  .step_item
+    width: 20%
+    min-height: 288px
+    +flex
+    +ai-center
+    padding: 35px
+    background: $color_blue
+    color: #fff
+    +transition($transition_default)
+    border-right: 1px solid #fff
+    &:last-child
+      border-right: 0
+    @media (max-width: 1200px)
+      padding: 20px
+      width: 25%
+      border-bottom: 1px solid #fff
+      min-height: 240px
+    @media (max-width: 991px)
+      padding: 15px
+      width: 33.33%
+    @media (max-width: 767px)
+      width: 50%
+      min-height: 200px
+    @media (max-width: 575px)
+      width: 100%
+    &:hover
+      background: $dakr_blue
+
+
+
+
+    &.first
+      background: $dakr_blue
+      font-family: $Montserrat-ExtraBold
+      font-size: 30px
+      line-height: 34px
+      @media (max-width: 1200px)
+        font-size: 25px
+        line-height: 1.2
+      @media (max-width: 991px)
+        font-size: 22px
+      @media (max-width: 767px)
+        min-height: 70px
+
+    picture
+      display: inline-block
+      margin-bottom: 30px
+      @media (max-width: 1200px)
+        margin-bottom: 20px
+      @media (max-width: 991px)
+        margin-bottom: 10px
+
+    .step
+      font-family: $Montserrat-ExtraBold
+      font-size: 20px
+      line-height: 24px
+      margin-bottom: 8px
+      @media (max-width: 1200px)
+        font-size: 18px
+        line-height: 1.2
+      @media (max-width: 991px)
+        font-size: 16px
+    .text
+      font-size: 18px
+      line-height: 22px
+      @media (max-width: 1200px)
+        font-size: 16px
+        line-height: 1.2
+
+
+
+
+.section_title
+  padding-left: 95px
+  +flex
+  +ai-center
+  +j-beetween
+  @media (max-width: 1200px)
+    padding-left: 70px
+  @media (max-width: 991px)
+    padding-left: 50px
+  @media (max-width: 767px)
+    padding-left: 15px
+  .h2
+    color: #fff
+    margin-bottom: 0
+  &.blue
+    background: $dakr_blue
+
+.partners_title
+  padding-left: 95px
+  @media (max-width: 1200px)
+    padding-left: 70px
+  @media (max-width: 991px)
+    padding-left: 50px
+  @media (max-width: 767px)
+    padding-left: 15px
+  .h2
+    color: $color_blue
+
+.license_list
+  +flex
+  +wrap
+  .license_item
+    padding: 3px 0
+
+.slick_arrows
+  +flex
+  +ai-center
+  .slick_next
+    border-left: 1px solid #fff
+.slick_prev
+  width: 96px
+  height: 96px
+  background: $grey
+  position: relative
+  border: 0
+  padding: 0
+  display: inline-block
+  &:hover, &:focus
+    background: $color_blue
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='14' viewBox='0 0 28 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.25 7.00016L26.75 7.00016M6.91667 12.6668L1.25 7.00016L6.91667 12.6668ZM1.25 7.00016L6.91667 1.3335L1.25 7.00016Z' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  @media (max-width: 1200px)
+    width: 70px
+    height: 70px
+  @media (max-width: 575px)
+    width: 50px
+    height: 50px
+  &:before
+    +b_a
+    +m_a
+    width: 28px
+    height: 14px
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='14' viewBox='0 0 28 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.25 7.00016L26.75 7.00016M6.91667 12.6668L1.25 7.00016L6.91667 12.6668ZM1.25 7.00016L6.91667 1.3335L1.25 7.00016Z' stroke='%23353A83' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+.slick_next
+  width: 96px
+  height: 96px
+  background: $grey
+  position: relative
+  border: 0
+  padding: 0
+  display: inline-block
+  &:hover, &:focus
+    background: $color_blue
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='14' viewBox='0 0 28 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M26.75 7.00008L1.25 7.00008M21.0833 1.33341L26.75 7.00008L21.0833 1.33341ZM26.75 7.00008L21.0833 12.6667L26.75 7.00008Z' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  @media (max-width: 1200px)
+    width: 70px
+    height: 70px
+  @media (max-width: 575px)
+    width: 50px
+    height: 50px
+  &:before
+    +b_a
+    +m_a
+    width: 28px
+    height: 14px
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='14' viewBox='0 0 28 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M26.75 7.00008L1.25 7.00008M21.0833 1.33341L26.75 7.00008L21.0833 1.33341ZM26.75 7.00008L21.0833 12.6667L26.75 7.00008Z' stroke='%23353A83' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+
+.bg_white
+  background: #fff !important
+.blue
+  color: $color_blue
+
+
+.partners_box
+  +flex
+  +wrap
+  +ai-center
+  .partners_title
+    width: 33.5%
+    +flex
+    +ai-center
+    @media (max-width: 991px)
+      width: 100%
+      padding: 30px
+    .h2
+      margin-bottom: 0
+  .partners_slider_box
+    width: 66.5%
+    +flex
+    +ai-center
+    @media (max-width: 991px)
+      width: 100%
+    .partners_slider_item
+      text-align: center
+      img
+        display: inline-block
+
+
+    .partners_slider
+      width: calc(100% - 192px)
+      @media (max-width: 1200px)
+        width: calc(100% - 140px)
+      @media (max-width: 575px)
+        width: calc(100% - 100px)
+
+.section_form
+  background: $color_blue
+  color: #fff
+  padding: 45px 0 55px
+  @media (max-width: 1200px)
+    padding: 30px 0 40px
+
+  .section_form_title
+    margin-bottom: 5px
+  .section_form_subtitle
+    color: #DCDCDC
+    font-size: 17px
+    font-family: $Montserrat-Medium
+    margin-bottom: 23px
+    @media (max-width: 1200px)
+      font-size: 16px
+
+
+
+
+footer
+  background: $dakr_blue
+  color: #fff
+  padding: 50px 0 35px
+  @media (max-width: 1200px)
+    padding: 30px 0 20px
+.footer_row
+  +flex
+  +wrap
+  .f_col
+    width: 100%
+    margin-bottom: 20px
+    @media (min-width: 576px)
+      width: 50%
+
+    @media (min-width: 992px)
+      width: 33.33%
+      margin-bottom: 0
+
+    @media (min-width: 1201px)
+      &:nth-child(1)
+        width: 23%
+      &:nth-child(2)
+        width: 24%
+      &:nth-child(3)
+        width: 20%
+      &:nth-child(4)
+        width: 33%
+  .logo
+    margin-bottom: 25px
+  .copyright
+    font-size: 14px
+    line-height: 17px
+    color: #F1F1F1
+  .contacts
+    .f_title
+      font-family: $Montserrat-SemiBold
+      font-size: 16px
+      margin-bottom: 5px
+    ul
+      margin-bottom: 30px
+      li
+        font-family: $Montserrat-Regular
+        font-size: 16px
+        color: #fff
+        a
+          font-size: 16px
+          color: #fff
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+
+
+  .f_menu
+    li
+      margin-bottom: 10px
+      a
+        color: #fff
+        font-size: 16px
+        line-height: 20px
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+
+
+
+
+
+.breadcrumb_section
+  background: $color_blue
+  padding: 35px 0
+  @media (max-width: 1200px)
+    padding: 20px 0
+  @media (max-width: 767px)
+    padding: 10px 0
+  .breadcrumb
+    padding: 0
+    margin: 0
+    background: none
+    li
+      position: relative
+      padding: 0 30px
+      @media (max-width: 767px)
+        padding: 0 20px
+      @media (max-width: 575px)
+        padding: 0 10px
+      + li
+        &:before
+          +b_a
+          left: -3px
+          top: 0
+          bottom: 0
+          margin: auto
+          width: 7px
+          height: 10px
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.35005 0L0.175049 1.175L3.99172 5L0.175049 8.825L1.35005 10L6.35005 5L1.35005 0Z' fill='white'/%3e%3c/svg%3e ")
+      &:first-child
+        padding-left: 0
+      &:last-child
+        a
+          color: #fff
+      a
+        font-size: 18px
+        color: rgba(255, 255, 255, 0.5)
+        text-decoration: none
+        @media (max-width: 1200px)
+          font-size: 16px
+        @media (max-width: 575px)
+          font-size: 14px
+        &:hover
+          text-decoration: underline
+
+
+
+.mb_80
+  margin-bottom: 80px
+  @media (max-width: 1200px)
+    margin-bottom: 50px
+  @media (max-width: 767px)
+    margin-bottom: 30px
+
+.products_section
+  padding-bottom: 120px
+  @media (max-width: 1200px)
+    padding-bottom: 90px
+  @media (max-width: 991px)
+    padding-bottom: 50px
+  @media (max-width: 575px)
+    padding-bottom: 30px
+.products_list
+  +flex
+  +wrap
+  border-top: 1px solid #F1F1F1
+  border-left: 1px solid #F1F1F1
+  margin-bottom: 40px
+  .product_item
+    width: 25%
+    border-right: 1px solid #F1F1F1
+    border-bottom: 1px solid #F1F1F1
+    position: relative
+    min-height: 360px
+    padding: 25px
+    text-align: center
+    @media (max-width: 1200px)
+      width: 33.33%
+    @media (max-width: 767px)
+      width: 50%
+      min-height: auto
+      padding: 10px
+    @media (max-width: 575px)
+      width: 100%
+    &:hover
+      &:before, .btn_default
+        opacity: 1
+    &:before
+      @media (min-width: 768px)
+        +b_a
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba(255, 255, 255, 0.7)
+        +transition($transition_default)
+        opacity: 0
+    picture
+      display: inline-block
+      width: 100%
+      height: 238px
+      position: relative
+      margin-bottom: 18px
+      @media (max-width: 1200px)
+        height: 200px
+      @media (max-width: 767px)
+        height: 180px
+      img
+        position: absolute
+        +m_a
+        max-width: 99%
+        max-height: 99%
+    .btn_default
+      @media (max-width: 767px)
+        max-width: 100%
+      @media (min-width: 768px)
+        position: absolute
+        +m_a
+        z-index: 2
+        opacity: 0
+
+    .product_name
+      font-family: $Montserrat-Medium
+      font-size: 18px
+      line-height: 24px
+      @media (max-width: 1200px)
+        font-size: 16px
+        line-height: 1.2
+        @media (max-width: 767px)
+          margin-bottom: 10px
+
+
+.btn_default
+  height: 60px
+  width: 100%
+  max-width: 228px
+  +flex
+  +ai-center
+  +j-center
+  color: #fff
+  background: $color_blue
+  font-size: 18px
+  text-decoration: none
+  border: 0
+  @media (max-width: 1200px)
+    height: 50px
+    font-size: 16px
+  @media (max-width: 767px)
+    height: 40px
+  &:hover
+    text-decoration: none
+    background: $dakr_blue
+
+
+
+.b_top
+  border-top: 1px solid #F1F1F1
+.page_pagination
+
+  .pagination
+    +flex
+    +j-center
+    li
+      + li
+        border-left: 1px solid #fff
+      a
+        width: 80px
+        height: 80px
+        +flex
+        +ai-center
+        +j-center
+        font-family: $Montserrat-Medium
+        font-size: 24px
+        text-decoration: none
+        @media (max-width: 1200px)
+          width: 60px
+          height: 60px
+          font-size: 20px
+        @media (max-width: 767px)
+          width: 50px
+          height: 50px
+          font-size: 16px
+        @media (max-width: 575px)
+          width: 40px
+          height: 40px
+        &:hover, &.active
+          color: #fff
+          text-decoration: none
+          background: $color_blue
+
+
+
+.product_slider_box
+  width: 100%
+  .product_slider
+    +flex
+    .product_slider_item
+      height: 650px
+      position: relative
+      @media (max-width: 991px)
+        height: 400px
+      @media (max-width: 575px)
+        height: 300px
+      a
+        position: relative
+        width: 100%
+        height: 100%
+        display: inline-block
+        img
+          position: absolute
+          +m_a
+          max-height: 98%
+          max-width: 98%
+    .slick-list
+      width: calc(100% - 217px)
+      border: 1px solid #F1F1F1
+      @media (max-width: 991px)
+        width: calc(100% - 133px)
+      @media (max-width: 575px)
+        width: calc(100% - 100px)
+
+    .slider__dots
+      height: 650px
+      overflow-x: hidden
+      overflow-y: auto
+      @media (max-width: 991px)
+        height: 400px
+      @media (max-width: 575px)
+        height: 300px
+      &::-webkit-scrollbar
+        -webkit-appearance: none
+        width: 0
+      &::-webkit-scrollbar:vertical
+        width: 5px
+        background: #fff
+        +border-radius(8px)
+      &::-webkit-scrollbar-thumb
+        +border-radius(8px)
+        background-color: rgba(51, 51, 51, 0.3)
+      li
+        width: 217px
+        height: 217px
+        position: relative
+        @media (max-width: 991px)
+          width: 133px
+          height: 133px
+        @media (max-width: 575px)
+          width: 100px
+          height: 100px
+        &.slick-active
+          border-bottom: 1px solid $color_blue
+        img
+          position: absolute
+          +m_a
+          max-width: 90%
+          max-height: 90%
+
+
+
+.custom_row
+  &.product_row
+    .col_big
+      @media (min-width: 992px)
+        width: 55%
+      &.ai_start
+        +ai-start
+        @media (min-width: 992px)
+          +j-end
+
+
+    .col_small
+      @media (min-width: 992px)
+        width: 45%
+      &.ai_start
+        +ai-start
+        padding-top: 0
+      .desc
+        max-width: 460px
+        .excerpt
+          margin-bottom: 35px
+        .btn_default
+          margin-bottom: 27px
+        .read_more.scroll_down
+          span
+            padding-right: 28px
+            &:before
+              +transform(rotate(90deg))
+
+
+
+.product_desc
+  padding-top: 65px
+  padding-bottom: 75px
+  @media (max-width: 1200px)
+    padding-top: 50px
+    padding-bottom: 55px
+  @media (max-width: 991px)
+    padding-top: 30px
+    padding-bottom: 30px
+  .desc
+    font-family: $Montserrat-light
+    @media (min-width: 1201px)
+      font-size: 18px
+      line-height: 24px
+    @media (max-width: 991px)
+      font-size: 16px
+
+
+.table
+  border: 1px solid #F1F1F1
+  width: 100%
+  max-width: 700px
+  .tr
+    border-bottom: 1px solid #F1F1F1
+    +flex
+    &:last-child
+      border: 0
+    .td
+      padding: 10px 40px
+      font-size: 18px
+      @media (max-width: 1200px)
+        font-size: 16px
+        padding: 10px
+      @media (max-width: 991px)
+        font-size: 14px
+        min-height: 50px
+      @media (min-width: 992px)
+        height: 76px
+
+        +flex
+        +ai-center
+      &:first-child
+        border-right: 1px solid #F1F1F1
+        background: rgba(241, 241, 241, 0.3)
+        font-family: $Montserrat-light
+        width: 68%
+
+      &:last-child
+        font-family: $Montserrat-Medium
+        width: 32%
+
+
+
+.custom_row
+  .contacts
+    .c_title
+      font-family: $Montserrat-SemiBold
+      margin-bottom: 7px
+    ul
+      margin-bottom: 32px
+      li
+        margin-bottom: 5px
+        @media (max-width: 991px)
+          font-size: 16px
+
+        a
+          color: #333
+          text-decoration: none
+          @media (max-width: 991px)
+            font-size: 16px
+          &:hover
+            text-decoration: none
+
+
+.col_big
+  > ymaps
+      @media (max-width: 991px)
+        height: 400px !important
+      @media (max-width: 767px)
+        height: 300px !important
+      > ymaps
+        @media (max-width: 991px)
+          height: 400px !important
+        @media (max-width: 767px)
+          height: 300px !important
+
+
+
+
+header
+  .custom_row
+    .col_big
+      border-bottom: 0
+
+
+.form_box
+  +flex
+  +wrap
+  .btn_box
+    width: 244px
+    @media (max-width: 991px)
+      width: 100%
+
+
+  .fields_row
+    width: calc(100% - 244px)
+    @media (max-width: 991px)
+      width: 100%
+    +flex
+    @media (max-width: 767px)
+      +wrap
+
+.btn_form
+  width: 100%
+  height: 68px
+  +flex
+  +ai-center
+  +j-center
+  background: #fff
+  border: 0
+  font-family: $Montserrat-Medium
+  font-size: 20px
+  @media (max-width: 1200px)
+    font-size: 18px
+  @media (max-width: 767px)
+    height: 45px
+  @media (min-width: 992px)
+    border-left: 2px solid $color_blue
+  &:hover
+    background: $dakr_blue
+    color: #fff
+input.form-control
+      background: rgba(241, 241, 241, 0.9)
+      font-family: $Montserrat-Medium
+      font-size: 17px
+      color: #333
+      height: 68px
+      border: 0
+      +border-radius(0)
+      padding-left: 40px
+      @media (min-width: 768px)
+        flex-grow: 1
+      @media (max-width: 767px)
+        width: 100%
+        padding-left: 15px
+        font-size: 16px
+        height: 45px
+      + input.form-control
+        border-left: 1px solid #fff
+        @media (max-width: 767px)
+          border-left: 0
+          border-top: 1px solid #fff
+      &::-webkit-input-placeholder
+        font-family: $Montserrat-Medium
+        font-size: 17px
+        color: rgba(51, 51, 51, 0.5)
+        @media (max-width: 1200px)
+          font-size: 16px
+      &::-moz-placeholder
+        font-family: $Montserrat-Medium
+        font-size: 17px
+        color: rgba(51, 51, 51, 0.5)
+        @media (max-width: 1200px)
+          font-size: 16px
+      &::-ms-input-placeholder
+        font-family: $Montserrat-Medium
+        font-size: 17px
+        color: rgba(51, 51, 51, 0.5)
+        @media (max-width: 1200px)
+          font-size: 16px
+      &:-ms-input-placeholder
+        font-family: $Montserrat-Medium
+        font-size: 17px
+        color: rgba(51, 51, 51, 0.5)
+        @media (max-width: 1200px)
+          font-size: 16px
+      &:-moz-placeholder
+        font-family: $Montserrat-Medium
+        font-size: 17px
+        color: rgba(51, 51, 51, 0.5)
+        @media (max-width: 1200px)
+          font-size: 16px
+
+
+
+
+.modal-dialog
+  @media (min-width: 576px)
+    max-width: 540px
+
+  .modal-content
+    background: $color_blue
+    color: #fff
+    +border-radius(0)
+    border: 0
+
+  .modal-body
+    padding: 70px 55px
+    position: relative
+    @media (max-width: 1200px)
+      padding: 30px
+    @media (max-width: 575px)
+      padding: 30px 15px
+
+    .modal_title
+      margin-bottom: 12px
+    .modal_subtitle
+      font-family: $Montserrat-Medium
+      font-size: 17px
+      line-height: 24px
+      color: #DCDCDC
+      margin-bottom: 35px
+      @media (max-width: 1200px)
+        font-size: 16px
+        line-height: 1.2
+      @media (max-width: 991px)
+        font-size: 14px
+        margin-bottom: 10px
+    .btn_form
+      border: 0
+    .field
+      margin-bottom: 10px
+      input.form-control
+        @media (min-width: 1201px)
+          padding-left: 30px
+      &.last
+        margin-bottom: 15px
+
+    .close
+      position: absolute
+      right: 15px
+      top: 15px
+      opacity: 1
+      width: 46px
+      height: 46px
+      @media (max-width: 1200px)
+        top: 0
+        right: 0
+      &:before
+        +b_a
+        +m_a
+        width: 22px
+        height: 22px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21.9346 2.76793L19.2321 0.0654297L11 8.29751L2.76793 0.0654297L0.0654297 2.76793L8.29751 11L0.0654297 19.2321L2.76793 21.9346L11 13.7025L19.2321 21.9346L21.9346 19.2321L13.7025 11L21.9346 2.76793Z' fill='white'/%3e%3c/svg%3e ")
+
+
+.modal-open, .modal
+  padding-right: 0 !important
+
+
+.page-noscroll
+  &:after
+    +b_a
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.3)
+    left: 0
+    top: 0
+    z-index: 99
+
